@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:700&display=swap');
+
+:root {
+  --mainColor:rgba(255,211,0, 0.4);
+}
+
+$eqb-color: #FBCF33;
+$base-text: #313131;
+
+body {
+  padding: 3em 5em;
+  font-family: 'Nunito Sans', sans-serif;
+  color:$base-text;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  pointer-events: none;
+
+}
+
+.nav-brand {
+  color: $base-text;
+  font-size: 1.25em;
+}
+
+.linkedin-profile {
+  width: 100%;
+  height: auto;
+}
+
+.home-padding {
+  padding: 15%;
+}
+
+.title-1 {
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+
+.title-2 {
+  font-size: 3.3rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.eqbank, .eqbank:hover {
+  color: $eqb-color;
+  text-decoration: none;
+}
+
+.hvr-grow {
+  display: inline-block;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.07);
+}
+
+.footer-text {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 85vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.space {
+  padding: 0.4em; /* space between footer icons */
+}
+
+.remove-space {
+  padding: 0 0;
+  border:  0 0;
+  margin: 0 0;
+}
