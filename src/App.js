@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link  } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
 import Footer from './components/Footer';
-
 
 function App() {
   return (
@@ -24,11 +23,9 @@ function App() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-
         <Route path="/" exact render={() => <Home />} />
         <Route path="/about" render={() => <About />} />
         <Route path="/contact" render={() => <Contact />} />
-
         <Footer />
       </Container>
     </Router>

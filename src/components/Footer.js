@@ -9,7 +9,7 @@ function Footer() {
         <footer className="mt-5 page-footer fixed-bottom">
             <Container fluid={true}>
                 <Row className="justify-content-center remove-space">
-                    <p className="footer-text">Made with 
+                    <p className="footer-text">made with 
                         <span role="img" aria-label="Heart"> 💞 </span>
                         by a
                         <span role="img" aria-label="South Korea"> 🇰🇷</span>

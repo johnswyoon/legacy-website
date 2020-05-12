@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 import profilePic from '../assets/img/profile.jpg';
 
-function Home(props) {
+function Home() {
     return (
-        <Container fluid={"md"}>
+        <Container fluid={"md"} className="d-flex align-content-center">
             <Row className="justify-content-center home-padding">
                 <Col xs={12} md={8} className="d-flex flex-wrap align-content-center">
                     <h1 className="title-1">hi chingu, i'm john!</h1>
@@ -12,7 +12,7 @@ function Home(props) {
                 </Col>
                 <Col xs="auto" md={4}>
                     <div className="hvr-grow">
-                        <img className="linkedin-profile rounded-circle justify-content-center" src={profilePic} alt="Profile Picture"/>
+                        <img className="linkedin-profile rounded-circle justify-content-center" src={profilePic} alt="Linkedin Profile"/>
                     </div>
                 </Col>
             </Row>
