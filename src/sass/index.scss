@@ -86,11 +86,40 @@ img {
 }
 
 .space {
-  padding: 0.4em; /* space between footer icons */
+  padding: 0.4em; // space between footer icons //
 }
 
 .remove-space {
   padding: 0 0;
   border:  0 0;
   margin: 0 0;
+}
+
+// for react-transitio-group
+.page {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+
+/* simple - enter transition 300ms, exit 150ms */
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 350ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms linear;
 }

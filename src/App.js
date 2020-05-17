@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -23,9 +24,19 @@ function App() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Route path="/" exact render={() => <Home />} />
-        <Route path="/about" render={() => <About />} />
-        <Route path="/contact" render={() => <Contact />} />
+
+        <Route render={({location}) => (
+          <TransitionGroup>
+            <CSSTransition key={location.key} timeout={300} classNames="fade">
+              <Switch location={location}>
+                <Route path="/" exact render={() => <Home />} />
+                <Route path="/about" render={() => <About />} />
+                <Route path="/contact" render={() => <Contact />} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
+
         <Footer />
       </Container>
     </Router>
