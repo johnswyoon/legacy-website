@@ -7,10 +7,22 @@
 $eqb-color: #FBCF33;
 $base-text: #313131;
 
+html {
+  height: 100vh;
+  min-height: fit-content;
+}
+
 body {
-  padding: 3em 5em;
+  height: 100%;
+  padding: 5% 6%;
   font-family: 'Nunito Sans', sans-serif;
   color:$base-text;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2% 3%;
+  }
 }
 
 p {
@@ -21,6 +33,14 @@ p {
 img {
   pointer-events: none;
 
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {display: none;}
+} 
+
+@media screen and (min-width: 768px) {
+  .mobile {display: none;}
 }
 
 .normal-text {
@@ -34,22 +54,45 @@ img {
 
 .linkedin-profile {
   width: 100%;
-  height: auto;
+  vertical-align: middle;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .home-padding {
-  padding: 15%;
+  margin: 8% 15% 15% 15%;
 }
 
 .title-1 {
-  font-size: 3.3rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
+.title-1a {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
 .title-2 {
-  font-size: 3.3rem;
+  font-size: 3rem;
   font-weight: 500;
   margin: 0;
+}
+
+.title-2a {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  text-align: center;
 }
 
 .eqbank, .eqbank:hover {
@@ -95,7 +138,7 @@ img {
   margin: 0 0;
 }
 
-// for react-transitio-group
+// for react-transition-group
 .page {
   position: absolute;
   top: 100px;
